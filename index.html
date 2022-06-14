@@ -18,7 +18,7 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body id="body">
 
   <!-- Rating state start -->
 <main class="card" id="card">
@@ -34,23 +34,17 @@
       <input type="button" value="4">
       <input type="button" value="5">
     </div>
-    <button type="submit" class="submit">Submit</button>
+    <button type="submit" class="submit" onclick="cargarGracias()">Submit</button>
     </form>
 </main>
   <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  <!--You selected   Add rating here  out of 5-->
-
-  <!-- Thank you! -->
-
-  <!-- We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch! -->
-
-  <!-- Thank you state end -->
-
-  
+  <!-- <section class="card_gracias">
+    <img src="images/illustration-thank-you.svg" alt="Gracias">
+    <p class="etiqueta">You selected ${} out of 5</p>
+    <h1>Thank you!</h1>
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+  </section> -->
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
