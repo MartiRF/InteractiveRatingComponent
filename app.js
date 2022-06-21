@@ -1,14 +1,17 @@
+const ranks = document.querySelectorAll('.rank')
+const etiqueta_puntaje = document.querySelector('.etiqueta')
+console.log(ranks)
 
-const crearCardGracias = (valor)=>{
-    let cardHTML = `<section class="card_gracias">
-    <img src="images/illustration-thank-you.svg" alt="Gracias">
-    <p class="etiqueta">You selected ${valor} out of 5</p>
-    <h1>Thank you!</h1>
-    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-      don’t hesitate to get in touch!</p>
-  </section> -->`
-  return cardHTML;
-}
-const cargarGracias = (valorBTN)=>{
-    document.getElementById('body').innerHTML = crearCardGracias();
+
+ranks.forEach((rank, i)=>{
+  rank.onclick = function (){
+    let puntaje_rank = (i+1)
+    etiqueta_puntaje.innerHTML = `You selected  ${puntaje_rank} out of 5`
+  }
+})
+
+function cargarGracias(){
+  document.getElementById('card').style.display='none';
+  document.getElementById('card_gracias').style.display='block'
+
 }
